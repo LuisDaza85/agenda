@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-brand-blue-lighter/20 via-white to-accent-yellow/10 text-gray-900 font-sans;
+  }
+}
+
+@layer components {
+  /* Refined button styles following brand guidelines */
+  .btn-primary {
+    @apply bg-gradient-to-r from-brand-purple to-brand-purple-light text-white px-6 py-2.5 rounded-2xl hover:shadow-xl hover:scale-[1.02] transition-all duration-300 font-semibold;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-brand-purple border-2 border-brand-purple/20 px-6 py-2.5 rounded-2xl hover:border-brand-purple hover:shadow-lg transition-all duration-300 font-semibold;
+  }
+
+  .btn-danger {
+    @apply bg-gradient-to-r from-accent-red to-accent-magenta text-white px-6 py-2.5 rounded-2xl hover:shadow-xl hover:scale-[1.02] transition-all duration-300 font-semibold;
+  }
+
+  .btn-success {
+    @apply bg-gradient-to-r from-accent-green-bright to-accent-green text-white px-6 py-2.5 rounded-2xl hover:shadow-xl hover:scale-[1.02] transition-all duration-300 font-semibold;
+  }
+
+  /* Enhanced input fields with better focus states */
+  .input-field {
+    @apply w-full px-4 py-3 border-2 border-gray-200 rounded-2xl focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-300 font-medium;
+  }
+
+  /* Refined card styles with better shadows and spacing */
+  .card {
+    @apply bg-white rounded-2xl shadow-lg border border-gray-100 p-6 backdrop-blur-sm;
+  }
+
+  .card-hover {
+    @apply bg-white rounded-2xl shadow-md border border-gray-100 p-6 hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 cursor-pointer;
+  }
+
+  /* Brand shape decorations */
+  .brand-shape-corner {
+    @apply absolute w-32 h-32 opacity-10 pointer-events-none;
+  }
+}
